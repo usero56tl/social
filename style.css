@@ -40,15 +40,12 @@
   color: #fff;
 }
 
-.button {
-  color: #fff;
-}
-
 .nav-link:hover {
   color: beige;
 }
 
 .button {
+  color: #fff;
   padding: 6px 24px;
   border: 2px solid #fff;
   background: transparent;
@@ -56,9 +53,9 @@
   cursor: pointer;
 }
 
-/*.button:active {
+/* .button:active {
 
-}*/
+} */
 
 /* Home */
 .home {
