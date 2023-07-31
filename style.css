@@ -22,21 +22,21 @@
 }
 
 .nav,
-.nav_items {
+.nav-items` {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.nav_item {
+.nav-item {
   column-gap: 25px;
 }
 
-.nav_logo {
+.nav-logo {
   font-size: 25px;
 }
 
-.nav_link {
+.nav-link {
   color: #fff;
 }
 
@@ -44,7 +44,7 @@
   color: #fff;
 }
 
-.nav_link:hover {
+.nav-link:hover {
   color: beige;
 }
 
@@ -69,7 +69,7 @@
 }
 
 /* From */
-.form_container {
+.form-container {
   position: absolute;
   max-width: 320px;
   width: 100%;
@@ -83,7 +83,7 @@
   box-shadow: #0b0217;
 }
 
-.form_close {
+.form-close {
   position: absolute;
   top: 10px;
   right: 20px;
@@ -93,7 +93,7 @@
   cursor: pointer;
 }
 
-.form_container h2 {
+.form-container h2 {
   font-size: 22px;
   color: #0b0217;
   text-align: center;
