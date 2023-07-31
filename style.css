@@ -17,7 +17,7 @@
 .nav{
     max-width: 1100px;
     width: 100%;
-    background: burlywood; 
+    background: burlywood;
     margin: 0 auto;
 }
 
@@ -56,9 +56,9 @@
     cursor: pointer;
 }
 
-.button:active {
-    
-}
+/*.button:active {
+
+}*/
 
 /* Home */
 .home {
