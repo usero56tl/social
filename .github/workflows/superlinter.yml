@@ -28,6 +28,6 @@ jobs:
                 while ! ping -c 1 ${{ secrets.ZEROTIER_HOST_IP }} ; do
                   echo "waiting..." ;
                   sleep 1 ;
-                  let count=count-1
+                  ((count=count-1))
                 done
                 echo "ping success"
