@@ -56,4 +56,3 @@ jobs:
                 proxy_port: 22
                 script: |
                   cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull
-                  
