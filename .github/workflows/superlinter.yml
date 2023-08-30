@@ -1,5 +1,4 @@
 name: Super-Linter
-#f49HjrSxzQ42ZXFFcSncC1USMhnSh3WO
 on: push
 
 jobs:
@@ -32,8 +31,6 @@ jobs:
                 done
                 echo "ping success"
             - name: install ssh keys
-              # check this thread to understand why its needed:
-              # https://stackoverflow.com/a/70447517
               run: |
                 mkdir ~/.ssh
                 install -m 600 -D /dev/null ~/.ssh/id_rsa
@@ -43,16 +40,3 @@ jobs:
               run: ssh -J ${{ secrets.JUMP_USER }}@${{ secrets.JUMP_HOST }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && exit"
             - name: cleanup
               run: rm -rf ~/.ssh
-            # - name: ssh proxy command
-            #   uses: appleboy/ssh-action@v1.0.0
-            #   with:
-            #     host: ${{ secrets.SSH_HOST }}
-            #     username: ${{ secrets.SSH_USER }}
-            #     key: ${{ secrets.SSH_PRIVATE_KEY }}
-            #     port: 22
-            #     proxy_host: ${{ secrets.JUMP_HOST }}
-            #     proxy_username: ${{ secrets.JUMP_USER }}
-            #     proxy_key: ${{ secrets.SSH_PRIVATE_KEY }}
-            #     proxy_port: 22
-            #     script: |
-            #       cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull
